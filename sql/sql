@@ -1,0 +1,19 @@
+SELECT, FROM — обязательные элементы запроса, которые определяют выбранные столбцы, их порядок и источник данных.
+SELECT * FROM Customers
+
+WHERE — необязательный элемент запроса, который используется, когда нужно отфильтровать данные по нужному условию. 
+select * from Customers
+WHERE City = 'London'
+
+GROUP BY
+select City, count(CustomerID) from Customers
+GROUP BY City
+
+HAVING
+select City, count(CustomerID) from Customers
+group by City
+HAVING count(CustomerID) >= 5 
+
+ORDER BY 
+select * from Customers
+ORDER BY City
